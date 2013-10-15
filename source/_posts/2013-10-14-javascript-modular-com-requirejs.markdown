@@ -6,11 +6,11 @@ comments: true
 categories: [javascript, amd, requirejs]
 ---
 
-O [RequireJS](http://requirejs.org/ "Site oficial do RequireJS") é uma biblioteca para carregar arquivos e módulos javascript que também gerência as dependências de cada módulo.
+O [RequireJS](http://requirejs.org/ "Site oficial do RequireJS") é uma biblioteca para carregar arquivos e módulos javascript que também gerencia as dependências de cada módulo.
 
 Exemplo:
 
-Você tem um módulo de login que depende de um módulo ajax que por sua vez depende de um módulo parseJSON. Ao fazer a requisição do módulo ajax o requirejs vai automáticamente carregar antes o módulo parseJSON e qualquer dependências que o módulo parseJSON tiver, e então irá carregar o módulo ajax e por fim carregará seu módulo de login.
+Você tem um módulo de login que depende de um módulo ajax que por sua vez depende de um módulo parseJSON. Ao fazer a requisição do módulo ajax o requirejs vai automáticamente carregar antes o módulo parseJSON e quaisquer dependências que o módulo parseJSON tiver, e então irá carregar o módulo ajax e por fim carregará seu módulo de login.
 
 
 Por onde começar?
@@ -42,7 +42,7 @@ Definir um módulo é simples:
 
 ---
 
-Se o seu módulo não tem nenhuma dependência e é só uma coleção então você pode passar ele como uma objeto literal para a função **_define_** do RequireJs ex.:
+Se o seu módulo não tem nenhuma dependência e possui apenas uma coleção, então você pode passar ele como um objeto literal para a função **_define_** do RequireJs ex.:
 
 ```javascript
 define({
@@ -54,7 +54,7 @@ define({
 ```
 ---
 
-Se o seu módulo não tem nenhuma dependência mas é uma função, então você apenas passa uma função como parametro que pode retornar o que você quer tornar público ou a propria função ex.:
+Caso seu módulo não tenha nenhuma dependência mas é uma função, então você apenas passa uma função como parametro que pode retornar o que você quer tornar público ou a propria função ex.:
 
 ```javascript
 define(function () {
@@ -66,7 +66,7 @@ define(function () {
 ```
 ---
 
-E finalmente se o seu módulo tem dependências você precisa apenas passar um array para a função **_define_** com as dependências antes de passar a função ex.:
+Caso o seu módulo tenha dependências você precisa apenas passar um array para a função **_define_** com as dependências antes de passar a função ex.:
 
 ```javascript
 define([
@@ -80,11 +80,11 @@ define([
 })
 
 ```
-No exemplo acima o módulo de ajax está dentro de uma pasta chamada lib.
+No exemplo acima o módulo de ajax está dentro de uma pasta chamada __lib__.
 
 ---
 
-#### E a requisição do seu módulo de login ficaria no arquivo **main.js** de alguma duas formas
+#### E a requisição do seu módulo de login ficaria no arquivo **main.js** de alguma das duas formas
 
 
 Caso o seu módulo não retorne nenhum valor e seja apenas uma função que será auto executada:
@@ -103,5 +103,5 @@ define([
 
 ```
 
-Acho que já deu para pegar um pouco do que é o RequireJS e como mudularizar seu código com ele, em breve irei fazer um outro post mostrando como carregar códigos de terceiros que não são módulos AMD, arquivos de templates, usar o Require para executar seus testes automatizados e otimizar o RequireJs com [RequireJS Optimizer](http://requirejs.org/docs/optimization.html).
+Acho que já deu para pegar um pouco do que é o RequireJS e como mudularizar seu código com ele. Em breve farei outros posts mostrando como carregar códigos de terceiros que não são módulos AMD, arquivos de templates, usar o RequireJS para executar seus testes automatizados e otimizar o RequireJS com [RequireJS Optimizer](http://requirejs.org/docs/optimization.html).
 
