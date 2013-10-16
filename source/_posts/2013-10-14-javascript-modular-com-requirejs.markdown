@@ -35,7 +35,7 @@ Talvez essa tag script tenha um pouco mais do que você está acostumado, mas é
 Criando um módulo:
 -------------------------
 
-Um módulo é diferente de um arquivo javascript tradicional, é imporatante entender que cada módulo cria um novo escopo o que evita poluir o namespace global e faz com que um módulo não entre em conflito com outros, um módulo também pode listar suas dependências e trazer elas sem precisar de uma referência a objetos globais e sim receber elas como argumentos na função que define o módulo. Os módulos do RequireJS são extensões do [Javascript Module Pattern](http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html), com o benefício de não precisar de variáveis globais.
+Um módulo é diferente de um arquivo javascript tradicional, é importante entender que cada módulo cria um novo escopo o que evita poluir o namespace global e faz com que um módulo não entre em conflito com outros, um módulo também pode listar suas dependências e trazer elas sem precisar de uma referência a objetos globais e sim receber elas como argumentos na função que define o módulo. Os módulos do RequireJS são extensões do [Javascript Module Pattern](http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html), com o benefício de não precisar de variáveis globais.
 
 Definir um módulo é simples:
 ----------------------------
